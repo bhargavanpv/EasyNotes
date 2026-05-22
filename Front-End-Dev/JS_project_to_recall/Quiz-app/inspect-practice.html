@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        button{
+                width: 200px;
+                height: 70px;
+                font-size: 20px;
+        }
+        p{
+            font-size: 40px;
+            font-family: monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+        <p class="d">Output will be displayed here</p>
+    <script>
+        'use strict';
+
+        let output = document.querySelector(".d");
+
+       function marry(man,women){
+        man.wife = women;
+        women.husband = man;
+
+        return {father : man,mother : women}
+
+       }
+
+        let family = marry({
+            name : "Bhargav"
+        },{
+            name : "Swathika"
+        });
+
+        delete family.father;
+        delete family.querySelector9.husband;
+
+
+        //--------------------------OUTPUTS------------------------------
+
+        let text = " ";
+
+        for(let key in family){
+            text += key + " : " + family[key].name + "<br>";
+        }
+        
+        
+        output.innerHTML = text ;
+        
+        
+
+    </script>
+</body>
+
+</html>
